@@ -1,8 +1,9 @@
-<div class="chat-container">
-  <div class="avatar" (click)="contactAvatarClicked()"></div>
-  <div class="chat-summary">
-    <div class="chat-title">Hiren Parekh</div>
-    <div class="chat-message">good morning</div>
+<div  class="chat-container">
+  <div class="avatar" (click)="showContactConversation()"><img class="avatar" src="./../../../assets/whats-profile-{{infos.username | lowercase}}.jpg"></div>
+  <div *ngIf="infos" class="chat-summary">
+    <div [ngClass]="{'chat-title-number': header, 'contact-list-title-number': !header}">{{infos.userPhoneNumber}}</div>
+    <div class="chat-title-name">{{infos.username}}</div>
+    <div *ngIf="!header" class="chat-message">{{infos.lastMessage.type.code == '2' ? 'notRead' : ''}} {{infos.lastMessage.message}}</div>
   </div>
 
 </div>

@@ -1,8 +1,13 @@
+
+@import '../../../../theme.scss';
+
+$app-primary: map-get($app-theme, primary);
+
 .header {
   padding: 10px;
   height: 70px;
   width: 100%;
-  background-color: #e2e2e2;
+  background-color: mat-color($app-primary);
   box-shadow: 0 0 4px 0 grey;
 }
 
@@ -10,18 +15,18 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  color: #bbbbbb;
+  color: mat-color($app-primary);
   overflow: hidden;
   z-index: 1;
 }
 
 .header-options {
-  color: #bbbbbb;
+  color: mat-color($app-primary);
   cursor: pointer;
 }
 
 .chat-message-container {
-  background-color: #EEEEEE;
+  background-image: url("../../../../assets/whats-app-background.png");;
   flex: 1;
   padding: 0 15px;
   overflow-y: scroll;

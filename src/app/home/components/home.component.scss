@@ -1,9 +1,13 @@
+@import '../../../theme.scss';
+
+$app-primary: map-get($app-theme, primary);
+
 .wrapper {
   position: absolute;
-  top: 40px;
-  bottom: 40px;
-  left: 40px;
-  right: 40px;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   padding: 0;
   margin: 0;
   transition: 0.3s;
@@ -43,7 +47,7 @@
 
 .chat-window-container {
   width: 100%;
-  background-color: #00c853;
+  background-color: mat-color($app-primary);
   flex: 1;
   display: flex;
   flex-direction: column;
