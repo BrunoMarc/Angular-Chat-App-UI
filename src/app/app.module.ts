@@ -1,11 +1,12 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+
 
 import { AppComponent } from './app.component';
 import {HomeComponent} from "./home/components/home.component";
-import {MaterialModule} from "@angular/material";
+import { MaterialModule } from './material.module';
 import {FlexLayoutModule} from "@angular/flex-layout";
 import {ChatListComponent} from "./chat/components/chat-list/chat-list.component";
 import {ChatWindowComponent} from "./chat/components/chat-window/chat-window.component";
@@ -28,7 +29,7 @@ import {SimpleMsgComponent} from "./messages/components/simple-msg/simple-msg.co
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     MaterialModule,
     FlexLayoutModule
   ],
